@@ -1,8 +1,9 @@
 import React, { createContext, useState, FC } from "react";
-import { ThemeContextState } from "./types";
+import { Theme, ThemeContextState } from "./types";
 
 const contextDefaultValues: ThemeContextState = {
-  mode: "light"
+  theme: Theme.Light,
+  setTheme: (theme) => console.warn(`The theme is ${theme}.`)
 };
 
 export const ThemeContext = createContext<ThemeContextState>(
@@ -10,12 +11,12 @@ export const ThemeContext = createContext<ThemeContextState>(
 );
 
 const ThemeProvider: FC = ({ children }) => {
-  const [theme, setTheme] = useState<string>(contextDefaultValues.mode);
+  const [theme, setTheme] = useState<Theme>(contextDefaultValues.theme);
 
   return (
     <ThemeContext.Provider
       value={{
-        mode: theme
+        theme, setTheme
       }}
     >
       {children}

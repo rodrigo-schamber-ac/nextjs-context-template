@@ -1,3 +1,9 @@
+export enum Theme {
+    Dark = 'Dark',
+    Light = 'Light',
+}
+
 export type ThemeContextState = {
-    mode: string;
+    theme: Theme;
+    setTheme: (Theme: Theme) => void;
 };

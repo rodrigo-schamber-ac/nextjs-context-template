@@ -1,21 +1,11 @@
 import React, { useContext, FC } from "react";
-import ThemeProvider, { ThemeContext } from "../contexts/ThemeContext";
+import ThemeProvider from "../contexts/ThemeContext";
+import ThemedContainer from "./ThemedContainer";
 
-const Theme = () => {
-  const { mode } = useContext(ThemeContext);
-
-  return (
-    <div>
-     {mode}
-    </div>
-  );
-};
-
-
-const App: FC = () =>{
+const App: FC = () => {
     return (
         <ThemeProvider>
-            <Theme />
+            <ThemedContainer />
         </ThemeProvider>
     )
 };
