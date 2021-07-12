@@ -2,7 +2,7 @@ import React, { createContext, useState, FC } from "react";
 import { Theme, ThemeContextState } from "./types";
 
 const contextDefaultValues: ThemeContextState = {
-  theme: Theme.Light,
+  theme: Theme.English,
   setTheme: (theme) => console.warn(`The theme is ${theme}.`)
 };
 

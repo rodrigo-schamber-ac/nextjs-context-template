@@ -1,6 +1,6 @@
 export enum Theme {
-    Dark = 'Dark',
-    Light = 'Light',
+    Portuguese = 'Portuguese',
+    English = 'English',
 }
 
 export type ThemeContextState = {
