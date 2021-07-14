@@ -10,6 +10,14 @@ export const ThemeContext = createContext<ThemeContextState>(
   contextDefaultValues
 );
 
+export const ThemeConsumer: FC = () => {
+  return (
+    <ThemeContext.Consumer>
+      {(context) => <div id="context-test">{context.theme}</div>}
+    </ThemeContext.Consumer>
+  )
+};
+
 const ThemeProvider: FC = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(contextDefaultValues.theme);
 
