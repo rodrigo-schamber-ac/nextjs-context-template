@@ -13,7 +13,7 @@ export const ThemeContext = createContext<ThemeContextState>(
 export const ThemeConsumer: FC = () => {
   return (
     <ThemeContext.Consumer>
-      {(context) => <div id="context-test">{context.theme}</div>}
+      {(context) => <div>{context.theme}</div>}
     </ThemeContext.Consumer>
   )
 };
