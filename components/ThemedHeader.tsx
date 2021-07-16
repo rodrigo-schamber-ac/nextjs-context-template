@@ -11,7 +11,7 @@ export function switchTheme (contextProvider: ThemeContextState) {
     }
 }
 
-const ThemedHeader:FC = () => {
+const ThemedHeader: FC = () => {
     const { theme, setTheme } = useContext(ThemeContext);
     return (
         <div className="h-screen flex justify-center items-center">
