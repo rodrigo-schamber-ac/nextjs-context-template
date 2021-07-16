@@ -1,1 +1,1 @@
-export { default, ThemeConsumer, ThemeContext } from "./ThemeProvider";
+export { default, ThemeContext } from "./ThemeProvider";
