@@ -1,9 +1,7 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-const ThemedContainer: FC = ({children}) => {
-  
-  return (<div>{children}</div>);
-
+const ThemedContainer: FC = ({ children }) => {
+  return <div>{children}</div>;
 };
 
 export default ThemedContainer;

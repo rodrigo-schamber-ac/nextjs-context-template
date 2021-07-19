@@ -8,7 +8,7 @@
     "start": "next start",
     "test": "jest",
     "lint": "next lint",
-    "prettier-format": "prettier --config .prettierrc 'src/**/*.tsx' --write"
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts*' --write"
   },
   "dependencies": {
     "next": "11.0.1",
