@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from 'react';
-import { render, RenderOptions } from '@testing-library/react';
+import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import ThemeProvider from '../src/contexts/ThemeContext';
 
 const AllTheProviders: FC = ({ children }) => {
@@ -13,7 +13,7 @@ const AllTheProviders: FC = ({ children }) => {
 const customRender = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>
-) => render(ui, { wrapper: AllTheProviders, ...options })
+): RenderResult => render(ui, { wrapper: AllTheProviders, ...options });
 
 export * from '@testing-library/react';
 export { customRender as render };

@@ -2,7 +2,7 @@ import React, { useContext, FC } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { Theme, ThemeContextType } from '../types/types';
 
-export function switchTheme(contextProvider: ThemeContextType) {
+export function switchTheme(contextProvider: ThemeContextType): void {
   if (contextProvider.theme === Theme.English) {
     contextProvider.setTheme(Theme.Portuguese);
   } else {

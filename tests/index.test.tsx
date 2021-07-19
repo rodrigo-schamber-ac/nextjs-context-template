@@ -1,9 +1,7 @@
-import React, { FC, ReactElement } from 'react';
+import React from 'react';
 import { fireEvent, render, screen } from './test-utils';
 import '@testing-library/jest-dom/extend-expect';
-import ThemeContext from '../src/contexts/ThemeContext';
-import ThemeProvider from '../src/contexts/ThemeContext/ThemeProvider';
-import ThemedHeader, {switchTheme} from '../src/components/ThemedHeader';
+import ThemedHeader from '../src/components/ThemedHeader';
 
 test('ThemedHeader shows default value', () => {
     render(<ThemedHeader />)
