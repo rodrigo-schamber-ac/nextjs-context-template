@@ -1,6 +1,9 @@
+import React, { FC } from 'react';
 import App from '../components/App';
 import 'tailwindcss/tailwind.css';
 
-export default function Home() {
-  return <App />;
-}
+const Home: FC = () => {
+  return (<App />);
+};
+
+export default Home;

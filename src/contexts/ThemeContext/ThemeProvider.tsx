@@ -1,7 +1,7 @@
 import React, { createContext, useState, FC } from 'react';
 import { Theme, ThemeContextType } from '../../types/types';
 
-const contextDefaultValues: ThemeContextType = {
+ export const contextDefaultValues: ThemeContextType = {
   theme: Theme.English,
   setTheme: () => void {},
 };
