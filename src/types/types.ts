@@ -3,7 +3,7 @@ export enum Theme {
     English = 'English',
 }
 
-export type ThemeContextState = {
+export type ThemeContextType = {
     theme: Theme;
     setTheme: (Theme: Theme) => void;
 };

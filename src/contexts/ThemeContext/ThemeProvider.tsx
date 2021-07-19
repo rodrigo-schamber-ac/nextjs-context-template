@@ -1,12 +1,12 @@
 import React, { createContext, useState, FC } from "react";
-import { Theme, ThemeContextState } from "./types";
+import { Theme, ThemeContextType } from "../../types/types";
 
-const contextDefaultValues: ThemeContextState = {
+const contextDefaultValues: ThemeContextType = {
   theme: Theme.English,
   setTheme: (theme) => console.warn(`The theme is ${theme}.`)
 };
 
-export const ThemeContext = createContext<ThemeContextState>(
+export const ThemeContext = createContext<ThemeContextType>(
   contextDefaultValues
 );
 

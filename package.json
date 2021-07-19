@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.tsx' --write"
   },
   "dependencies": {
     "next": "11.0.1",
@@ -29,6 +30,7 @@
     "jest": "^27.0.6",
     "jsdom": "^16.6.0",
     "postcss": "^8.3.5",
+    "prettier": "^2.3.2",
     "tailwindcss": "^2.2.4",
     "ts-jest": "^27.0.3",
     "typescript": "4.3.5"
