@@ -3,7 +3,7 @@ import { Theme, ThemeContextType } from '../../types/types';
 
 const contextDefaultValues: ThemeContextType = {
   theme: Theme.English,
-  setTheme: (theme) => console.warn(`The theme is ${theme}.`)
+  setTheme: () => void {},
 };
 
 export const ThemeContext =
