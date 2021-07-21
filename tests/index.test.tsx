@@ -5,21 +5,23 @@ import { contextDefaultValues } from '../src/contexts/ThemeContext/ThemeProvider
 import ThemedHeader from '../src/components/ThemedHeader';
 import {Theme} from '../src/types/types';
 
-test('Test ThemeContext default values', () => {
+describe('Testing Context API', () => {
+    test('Take a snapshot', () => {
+        expect(render(<ThemedHeader />)).toMatchSnapshot();
+    });
+    test('Test ThemeContext default values', () => {
+        expect(contextDefaultValues.theme).toEqual(Theme.English);
 
-    expect(contextDefaultValues.theme).toEqual(Theme.English);
+        expect(contextDefaultValues.setTheme(Theme.English)).toBeUndefined();
+    });
 
-    expect(contextDefaultValues.setTheme(Theme.English)).toBeUndefined();
+    test('Test switching theme', () => {
+        render(<ThemedHeader />);
 
-});
+        fireEvent.click(screen.getByText('English'));
+        expect(screen.getByText(Theme.Portuguese)).toBeInTheDocument();
 
-test('Test switching theme', () => {
-    render(<ThemedHeader />)
-    
-    fireEvent.click(screen.getByText('English'))
-    expect(screen.getByText(Theme.Portuguese)).toBeInTheDocument();
-    
-    fireEvent.click(screen.getByText('Portuguese'));
-    expect(screen.getByText(Theme.English)).toBeInTheDocument();
-
+        fireEvent.click(screen.getByText('Portuguese'));
+        expect(screen.getByText(Theme.English)).toBeInTheDocument();
+    });
 });
